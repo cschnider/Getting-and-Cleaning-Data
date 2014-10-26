@@ -1,0 +1,23 @@
+Code Book
+====================
+
+# The script `run_analysis.R`
+- Raw data gets downloaded
+- The tidy dataset gets created in the current directory as `activity_subject_means.txt
+
+# Data Set 
+* The tidy data set contains the mean of all mean and std values of each subject and each activity.
+* The data set is stored as a txt file using one space(" ") as the delimiter.
+* The first line of the data is the variable name of the data, the names are all quoted by '"'.
+
+# Variables
+* subject, each subject identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+* activity, each activity identifies a specific activity subject did. It has 6 different type of activities, including "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", and "LAYING"
+* all other variables are measurement collected from the accelerometer and gyroscope 3-axial raw signal.
+* the variable name convention is like the following
+  * All variable names start with "mean.of." prefixes since they are "mean" of some measurement.
+  * Besides the suffix, the variable names contains either a "mean" or "std", to tell if it is a "mean" or "standard deviation" measurement.
+  * If the variable end with ".X" or ".Y" or ".Z", means it is the measurement of X/Y/Z direction of a 3-axial singals.  
+  * The left part of the variable name mean what the signal really means:
+    * prefix 't' to denote time, they were time domain signals captured at a constant rate of 50 Hz.
+    * prefix 'f' to indicate frequency domain signals, they were applied by a Fast Fourier Transform (FFT) of the original signal.
